@@ -28,7 +28,7 @@ public class BoardController : ControllerBase
         return Ok(new { Id = id });
     }
 
-    [HttpGet("/{boardId}/nextstate")]
+    [HttpGet("/[controller]/{boardId}/nextstate")]
     public async Task<IActionResult> GetNextState(string boardId, CancellationToken token)
     {
         if (string.IsNullOrWhiteSpace(boardId))
@@ -41,7 +41,7 @@ public class BoardController : ControllerBase
         return Ok(state);
     }
 
-    [HttpGet("/{boardId}/state/{iterations}")]
+    [HttpGet("/[controller]/{boardId}/state/{iterations}")]
     public async Task<IActionResult> GetStateAtIteration(string boardId, int? iterations, CancellationToken token)
     {
         if (iterations is null || iterations <= 0)
@@ -57,7 +57,7 @@ public class BoardController : ControllerBase
         return Ok(state);
     }
 
-    [HttpGet("/{boardId}/state/final")]
+    [HttpGet("/[controller]/{boardId}/state/final")]
     public async Task<IActionResult> GetFinalState(string boardId, CancellationToken token)
     {
         if (string.IsNullOrWhiteSpace(boardId))

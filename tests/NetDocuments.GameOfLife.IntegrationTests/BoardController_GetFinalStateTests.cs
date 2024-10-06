@@ -35,7 +35,7 @@ public class BoardController_GetFinalStateTests : IClassFixture<GameOfLifeFactor
         await boardRepository.CreateBoard(board, CancellationToken.None);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/state/final");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/state/final");
 
         // assert
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
@@ -52,7 +52,7 @@ public class BoardController_GetFinalStateTests : IClassFixture<GameOfLifeFactor
         var board = new Board(initialState);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/state/final");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/state/final");
 
         // assert
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
@@ -81,7 +81,7 @@ public class BoardController_GetFinalStateTests : IClassFixture<GameOfLifeFactor
         await boardRepository.CreateBoard(board, CancellationToken.None);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/state/final");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/state/final");
         var result = JsonConvert.DeserializeObject<bool[,]>(await response.Content.ReadAsStringAsync());
 
         // assert

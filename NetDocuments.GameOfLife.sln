@@ -17,12 +17,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDocuments.GameOfLife.Api
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0A00B780-5CD0-43D0-BD01-0951188B99C8}"
 	ProjectSection(SolutionItems) = preProject
+		Description.md = Description.md
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDocuments.GameOfLife.IntegrationTests", "tests\NetDocuments.GameOfLife.IntegrationTests\NetDocuments.GameOfLife.IntegrationTests.csproj", "{AD059918-8032-4E65-A536-7451AC039872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDocuments.GameOfLife.IntegrationTests", "tests\NetDocuments.GameOfLife.IntegrationTests\NetDocuments.GameOfLife.IntegrationTests.csproj", "{AD059918-8032-4E65-A536-7451AC039872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDocuments.GameOfLife.UnitTests", "tests\NetDocuments.GameOfLife.UnitTests\NetDocuments.GameOfLife.UnitTests.csproj", "{7F07D02E-1AC8-49D0-BE9C-0F8AE58E0B68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDocuments.GameOfLife.UnitTests", "tests\NetDocuments.GameOfLife.UnitTests\NetDocuments.GameOfLife.UnitTests.csproj", "{7F07D02E-1AC8-49D0-BE9C-0F8AE58E0B68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

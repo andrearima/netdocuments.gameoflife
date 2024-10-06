@@ -40,7 +40,7 @@ public class BoardController_GetStateAtIterationTests : IClassFixture<GameOfLife
         var content = _factory.CreateContent(board);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/state/1");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/state/1");
         var result = JsonConvert.DeserializeObject<bool[,]>(await response.Content.ReadAsStringAsync());
 
         // assert
@@ -80,7 +80,7 @@ public class BoardController_GetStateAtIterationTests : IClassFixture<GameOfLife
         var content = _factory.CreateContent(board);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/state/{iterations}");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/state/{iterations}");
         var result = JsonConvert.DeserializeObject<bool[,]>(await response.Content.ReadAsStringAsync());
 
         // assert

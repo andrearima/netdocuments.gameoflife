@@ -40,7 +40,7 @@ public class BoardController_GetNextStateTests : IClassFixture<GameOfLifeFactory
         var content = _factory.CreateContent(board);
 
         // act
-        var response = await _httpClient.GetAsync($"{board.Id}/nextstate");
+        var response = await _httpClient.GetAsync($"board/{board.Id}/nextstate");
         var result = JsonConvert.DeserializeObject<bool[,]>( await response.Content.ReadAsStringAsync());
 
         // assert

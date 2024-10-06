@@ -153,9 +153,8 @@ public class Board
             for (int col = 0; col < Cols; col++)
                 sb.Append(BoardInitialState[row, col] ? '1' : '0');
 
-        using var md5 = MD5.Create();
         var inputBytes = Encoding.ASCII.GetBytes(sb.ToString());
-        var hashBytes = md5.ComputeHash(inputBytes);
+        var hashBytes = MD5.HashData(inputBytes);
 
         var hashSb = new StringBuilder();
         foreach (var b in hashBytes)
